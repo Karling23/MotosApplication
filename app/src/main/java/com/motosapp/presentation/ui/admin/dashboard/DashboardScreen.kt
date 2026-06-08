@@ -7,6 +7,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.automirrored.filled.TrendingUp
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -120,7 +122,7 @@ private fun DashboardContent(
                     title   = "Categorías activas",
                     value   = stats.activeMarcas.toString(),
                     subtitle = "${stats.totalMarcas} total",
-                    icon    = Icons.Default.List,
+                    icon    = Icons.AutoMirrored.Filled.List,
                     color   = Info,
                     onClick = { onNavigate("admin/marcas") },
                     modifier = Modifier.weight(1f),
@@ -160,7 +162,7 @@ private fun DashboardContent(
                 KpiCard(
                     title    = "Facturación total",
                     value    = "$${"%.0f".format(stats.totalRevenue)}",
-                    icon     = Icons.Default.TrendingUp,
+                    icon     = Icons.AutoMirrored.Filled.TrendingUp,
                     color    = Accent,
                     modifier = Modifier.weight(1f),
                 )

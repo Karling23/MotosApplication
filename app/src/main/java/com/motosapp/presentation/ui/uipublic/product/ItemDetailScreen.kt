@@ -7,6 +7,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -142,7 +143,7 @@ private fun MotocicletaDetailContent(
                     .padding(8.dp)
                     .background(Background.copy(alpha = 0.7f), RoundedCornerShape(50)),
             ) {
-                Icon(Icons.Default.ArrowBack, contentDescription = "Volver", tint = TextPrimary)
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Volver", tint = TextPrimary)
             }
         }
 

@@ -18,14 +18,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.motosapp.domain.model.Order
+import com.motosapp.presentation.components.ErrorScreen
 import com.motosapp.presentation.components.LoadingScreen
 import com.motosapp.presentation.components.StatusBadge
-import com.motosapp.presentation.components.LoadingScreen
-import com.motosapp.presentation.components.ErrorScreen
 import com.motosapp.presentation.viewmodel.OrdersViewModel
 import com.motosapp.theme.*
-import java.text.SimpleDateFormat
-import java.util.Locale
 
 private val STATUS_FILTERS = listOf(
     "" to "Todos",
