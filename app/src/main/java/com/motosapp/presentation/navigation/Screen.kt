@@ -1,0 +1,30 @@
+// presentation/navigation/Screen.kt
+package com.motosapp.presentation.navigation
+
+sealed class Screen(val route: String) {
+    // Auth
+    data object Login    : Screen("login")
+    data object Register : Screen("register")
+
+    // Public
+    data object Home     : Screen("home")
+    data object Catalog  : Screen("catalog")
+    data class  Motocicleta(val id: Int = 0) : Screen("motocicleta/{id}") {
+        fun createRoute(id: Int) = "motocicleta/$id"
+    }
+    data object Cart     : Screen("cart")
+
+    // Client
+    data object Orders       : Screen("orders")
+    data class  OrderDetail(val id: Int = 0) : Screen("orders/{id}") {
+        fun createRoute(id: Int) = "orders/$id"
+    }
+    data object Profile : Screen("profile")
+
+    // Admin
+    data object AdminDashboard  : Screen("admin")
+    data object AdminMarcas : Screen("admin/marcas")
+    data object AdminMotocicletas   : Screen("admin/motocicletas")
+    data object AdminOrders     : Screen("admin/orders")
+    data object AdminUsers      : Screen("admin/users")
+}
